@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejesh Neware - Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d4f0fc;
+            scroll-behavior: smooth;
+        }
+
+        /* Sticky Navigation Bar */
+        header {
+            background: #01303f;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Section Styling */
+        section {
+        padding: 100px 20px;
+        text-align: center;
+        min-height: 100vh;
+        scroll-margin-top: 80px; /* Adjust this value based on your header height */
+    }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+            color: #01303f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* Services & Courses */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: #02a9f7;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Contact Form */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Service Image Styling */
+        .service-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        button {
+            background: #02577a;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #01303f;
+        }
+
+        /* Animation */
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s ease-out;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tejesh Neware</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="hero" style="display: flex; align-items: center; justify-content: center; text-align: left; padding: 50px;">
+    <div style="flex: 1; text-align: center;"></div>
+        <img src="assets/my-photo.jpg" alt="Tejesh Neware" style="width: 300px; height: auto; border: 2px solid #01303f;margin-top: 65px;border-radius: 50%;">
+    </div>
+    <div style="flex: 2; padding-left: 20px;">
+        <h1>Hi, I'm Tejesh Neware</h1>
+        <p>Who am I? What do I do? How can I help you?</p>
+        <p>
+            I'm a passionate freelancer, instructor at Govt. ITI Goregaon, and a tech content creator. 
+            I specialize in GeM Portal services, digital marketing, SEO, and more. 
+            My mission is to empower individuals and businesses by providing tailored solutions, 
+            sharing knowledge, and helping them achieve their goals in the digital world.
+        </p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>My Services</h2>
+    <div class="card-container">
+        <div class="card hidden">
+            <img src="assets/GEM.png" alt="GeM Portal Services" class="service-image" loading="lazy">
+            <p>GeM Portal Services</p>
+            <p>GeM (Government e-Marketplace) Portal is a platform for procurement of goods and services by government organizations. I offer freelancing services to assist businesses in registering, managing their profiles, and navigating the GeM Portal effectively to maximize opportunities and compliance.</p>
+            <button onclick="alert('Learn more about GeM Portal Services')">Learn More</button>
+        </div>
+        <div class="card hidden">
+            <img src="assets/MAHATENDER.jpg" alt="Mahatender & CPPP" class="service-image" loading="lazy">
+            <p>E-Tendering</p>
+            <p>E-Tendering involves the electronic submission of tenders and bids for various projects and services. I offer freelancing services to assist businesses in navigating the e-tendering process, ensuring compliance, and maximizing their chances of success in securing contracts.</p>
+            <button onclick="alert('Learn more about E-Tendering')">Learn More</button>
+        </div>
+        <div class="card hidden">
+            <img src="assets/DIGITAL MARKETING.jpg" alt="Digital Marketing" class="service-image" loading="lazy">
+            <p>Digital Marketing</p>
+            <p>Digital marketing involves promoting products or services through digital channels such as search engines, social media, email, and websites. I offer freelancing services to help businesses enhance their online presence, drive traffic, and achieve their marketing goals effectively.</p>
+            <button onclick="alert('Learn more about Digital Marketing')">Learn More</button>
+        </div>
+    </div>
+    <br>
+    <div class="card-container">
+        <div class="card hidden">
+            <img src="assets/SEO.jpg" alt="SEO" class="service-image" loading="lazy">
+            <p>SEO</p>
+            <p>SEO (Search Engine Optimization) involves optimizing websites to rank higher on search engine results pages (SERPs), driving organic traffic and improving visibility. I offer freelancing services to help businesses enhance their online presence, implement effective SEO strategies, and achieve sustainable growth.</p>
+            <button onclick="alert('Learn more about SEO')">Learn More</button>
+        </div>
+        <div class="card hidden">
+            <img src="assets/SMM.jpg" alt="SMM" class="service-image" loading="lazy">
+            <p>SMM</p>
+            <p>SMM (Social Media Marketing) involves leveraging social media platforms to promote products, services, or brands. I offer freelancing services to help businesses create effective social media strategies, manage campaigns, and engage with their audience to drive growth and brand awareness.</p>
+            <button onclick="alert('Learn more about SMM')">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<style>
+    #services {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .service-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card {
+        background: #02a9f7;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+<!-- Courses Section -->
+<section id="courses">
+    <h2>Courses I Offer</h2>
+    <div class="card-container">
+        <div class="card hidden">
+            <p>GeM Portal Training</p>
+            <button onclick="alert('Learn more about GeM Portal Training')">Learn More</button>
+        </div>
+        <div class="card hidden">
+            <p>Digital Marketing</p>
+            <button onclick="alert('Learn more about Digital Marketing')">Learn More</button>
+        </div>
+        <div class="card hidden">
+            <p>Front-End Development</p>
+            <button onclick="alert('Learn more about Front-End Development')">Learn More</button>
+        </div>
+        <div class="card hidden">
+            <p>COPA Course</p>
+            <button onclick="alert('Learn more about COPA Course')">Learn More</button>
+        </div>
+    </div>
+</section>
+<!-- Clients Section -->
+<section id="clients">
+    <h2>Clients I Have Worked With</h2>
+    <marquee behavior="scroll" direction="left" style="background: #01303f; color: white; padding: 10px; font-weight: bold;">
+        Parth Fibrotech, Nagpur | Sarwadnya Sports & Fitness, Bhandara | BK Electricals, Bhandara | Shrawan Electricals, Bhandara | Nirwana Electricals, Bhandara | Anant Sales, Balaghat| Municipal Council, Bhandara | Municipal Council, Tumsar | Govt. Medical Colleges & Hospitals, Nagpur | Municipal Council, Gondia | Municipal Council, Chandrapur | Municipal Council, Wardha | Municipal Council, Yavatmal | Municipal Council, Washim | Municipal Council, Gadchiroli | Municipal Council, Bhandara | Municipal Council, Gondia | Municipal Council, Chandrapur | Municipal Council, Wardha | Municipal Council, Yavatmal | Municipal Council, Washim | Municipal Council, Gadchiroli
+    </marquee>
+</section>
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p class="hidden">I'm a freelancer, instructor at Govt. ITI Goregaon, and a tech content creator.</p>
+    <p class="hidden">I specialize in GeM Portal, Digital Marketing, SEO, and more.</p>
+</section>
+<!-- Contact Section with FormSubmit -->
+<section id="contact">
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form target="_blank" action="https://formsubmit.co/newaretejesh1828@gmail.com" method="POST">
+            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" class="form-control" name="message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+        </form>
+    </div>
+    <hr>
+    <p>Email: newaretejesh1828@gmail.com</p>
+    <p>Phone: 9637844970</p>
+    <p>Follow me on</p>
+    <p>
+    <a href="https://www.instagram.com/iamtejeshneware" target="_blank">Instagram</a> | 
+    <a href="https://www.facebook.com/iamtejeshneware/" target="_blank">Facebook</a>| 
+    <a href="https://www.youtube.com/channel/UCkM529SrZr2Tnlzq-REO7OA" target="_blank">Youtube</a>| 
+    <a href="https://www.linkedin.com/in/iamtejeshneware/" target="_blank">LinkedIn</a> |
+    <a href="https://x.com/iamtejeshneware" target="_blank">X</a>
+    </p>
+</section>
+
+<script>
+    // Smooth Scroll on Click
+    document.querySelectorAll("nav ul li a").forEach(anchor => {
+        anchor.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+        });
+    });
+
+    // Scroll Animation
+    function revealOnScroll() {
+        let hiddenElements = document.querySelectorAll(".hidden");
+        hiddenElements.forEach(element => {
+            let position = element.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight / 1.3;
+            if (position < screenPosition) {
+                element.classList.add("show");
+            }
+        });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>
